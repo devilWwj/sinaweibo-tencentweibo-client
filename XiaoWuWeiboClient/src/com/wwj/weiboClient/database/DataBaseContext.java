@@ -1,0 +1,20 @@
+package com.wwj.weiboClient.database;
+
+import android.content.Context;
+
+
+public class DataBaseContext {
+	
+	private static DataHelper dataHelper;
+	
+	private static Object INSTANCE_LOCK = new Object();
+	
+	public static DataHelper getInstance(Context context) {
+	       synchronized (INSTANCE_LOCK) {
+	           if (dataHelper == null) {
+	        	   dataHelper = new DataHelper(context);
+	           }
+	           return dataHelper;
+	       }
+	   }
+}

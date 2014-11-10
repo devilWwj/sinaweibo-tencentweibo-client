@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="#000"
+            android:text="@string/back"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/btn_effect"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#000"
+            android:text="@string/effect"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#000"
+            android:text="@string/remove"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#000"
+            android:text="@string/save"
+            android:textColor="#FFF" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_picture_viewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pic_loading" />
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/tencent_list_selector"
+    >
+                <FrameLayout
+                    android:id="@+id/fr_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true" >
+
+                    <ImageView
+                        android:id="@+id/iv_profile_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="@string/empty"
+                        android:focusable="false"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/avatar_default" />
+
+                    <!-- 认证 -->
+
+                    <ImageView
+                        android:id="@+id/iv_verified"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="right|bottom"
+                        android:contentDescription="@string/empty"
+                        android:focusable="false"
+                        android:src="@drawable/v"
+                        android:visibility="gone" />
+                </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fr_title"
+        android:layout_toRightOf="@+id/fr_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:text="@string/app_name"
+            android:textColor="@color/blue" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_description_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/fr_title"
+        android:layout_toRightOf="@+id/fr_head"
+        android:text="哎哟，不错哦"
+        android:textColor="#000" />
+
+</RelativeLayout>

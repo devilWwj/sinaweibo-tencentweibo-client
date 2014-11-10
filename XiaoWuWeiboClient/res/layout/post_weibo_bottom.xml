@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/post_weibo_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/maintab_toolbar_bg"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:id="@+id/fl_is_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:id="@+id/cb_is_comment"
+            style="@style/MyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/post_as_comment"
+            android:textColor="#000"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/cb_post_weibo"
+            style="@style/MyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/cb_post_weibo"
+            android:textColor="#000"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/btn_insert_pic"
+            style="@style/main_tab_bottom2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/empty"
+            android:focusable="true"
+            android:src="@drawable/icon_write_pic_selector" />
+
+        <ImageView
+            android:id="@+id/btn_insert_location"
+            style="@style/main_tab_bottom2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/empty"
+            android:focusable="true"
+            android:src="@drawable/icon_write_lbs_selector" />
+
+        <ImageView
+            android:id="@+id/btn_insert_topic"
+            style="@style/main_tab_bottom2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/empty"
+            android:focusable="true"
+            android:src="@drawable/icon_write_topic_selector" />
+
+        <ImageView
+            android:id="@+id/btn_insert_at"
+            style="@style/main_tab_bottom2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/empty"
+            android:focusable="true"
+            android:src="@drawable/icon_write_at_selector" />
+
+        <ImageView
+            android:id="@+id/btn_insert_face"
+            style="@style/main_tab_bottom2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/empty"
+            android:focusable="true"
+            android:src="@drawable/icon_write_expression_selector" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_settings"
+        android:alphabeticShortcut="s"
+        android:icon="@drawable/setting"
+        android:title="设置"/>
+    <item
+        android:id="@+id/menu_official"
+        android:alphabeticShortcut="d"
+        android:icon="@drawable/officialweibo"
+        android:title="官方微博"/>
+    <item
+        android:id="@+id/menu_feedback"
+        android:alphabeticShortcut="b"
+        android:icon="@drawable/feedback"
+        android:title="意见反馈"/>
+    <item
+        android:id="@+id/menu_account"
+        android:alphabeticShortcut="h"
+        android:icon="@drawable/switchuser"
+        android:title="账号管理"/>
+    <item
+        android:id="@+id/menu_about"
+        android:alphabeticShortcut="f"
+        android:icon="@drawable/aboutweibo"
+        android:title="关于"/>
+    <item
+        android:id="@+id/menu_quit"
+        android:alphabeticShortcut="n"
+        android:icon="@drawable/menu_exit"
+        android:title="退出"/>
+
+</menu>

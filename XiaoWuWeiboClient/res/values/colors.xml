@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red">#ffff0000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#5778a7</color>
+    <color name="gray">#ff8aaef2</color>
+    <color name="title_text_color">#000</color>
+    <color name="backgroundcolor">#fff0f1f1</color>
+    <color name="text_color">#ff404142</color>
+    <color name="toolbar_btn_text_color">#FFF</color>
+    <color name="transparent">#00000000</color>
+<color name="dialog_btn_black">#535353</color>
+</resources>

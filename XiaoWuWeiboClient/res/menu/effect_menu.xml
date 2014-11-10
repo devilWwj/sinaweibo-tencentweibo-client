@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mnuGray"
+        android:title="灰度"/>
+    <item
+        android:id="@+id/mnuMosaic"
+        android:title="马赛克"/>
+    <item
+        android:id="@+id/mnuCrop"
+        android:title="截图"/>
+    <item
+        android:id="@+id/mnuRotate"
+        android:title="自由旋转图像"/>
+    <item
+        android:id="@+id/mnuResume"
+        android:title="恢复原始图像"/>
+
+</menu>

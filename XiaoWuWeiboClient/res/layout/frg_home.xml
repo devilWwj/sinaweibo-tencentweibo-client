@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_home"
+        layout="@layout/title_home" />
+
+    <include
+        android:id="@+id/lodingprogress"
+        layout="@layout/progress" />
+
+    <!-- 自定义刷新列表，下拉刷新 -->
+
+    <LinearLayout
+        android:id="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.wwj.weiboClient.view.PullToRefreshListView
+            android:id="@+id/sina_weibolist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:fastScrollEnabled="true"
+            android:visibility="visible" />
+
+        <com.wwj.weiboClient.view.PullToRefreshListView
+            android:id="@+id/tencent_weibolist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:fastScrollEnabled="true"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

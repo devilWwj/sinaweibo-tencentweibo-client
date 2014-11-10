@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tencent_list_selector"
+    android:descendantFocusability="blocksDescendants" >
+
+    <LinearLayout
+        android:id="@+id/ll_weibo_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tencent_list_selector"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingTop="3.0dip" >
+
+          <FrameLayout
+                    android:id="@+id/fr_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/home_headicon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="@string/empty"
+                        android:focusable="false"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/avatar_default" />
+
+                    <!-- 认证 -->
+
+                    <ImageView
+                        android:id="@+id/iv_verified"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="right|bottom"
+                        android:contentDescription="@string/empty"
+                        android:focusable="false"
+                        android:src="@drawable/v"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:padding="4.0dip" >
+
+            <TextView
+                android:id="@+id/home_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="32.0dip"
+                android:layout_alignParentLeft="true"
+                android:text="小巫"
+                android:textColor="@color/blue"
+                android:textSize="14.0sp" />
+
+            <ImageView
+                android:id="@+id/tencent_icon"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_alignTop="@+id/home_nick"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/home_nick"
+                android:src="@drawable/tencent" />
+
+            <ImageView
+                android:id="@+id/home_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/home_nick"
+                android:src="@drawable/icon_vip"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/home_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="32.0dip"
+                android:layout_alignParentRight="true"
+                android:text="1分钟前"
+                android:textColor="#F18D00"
+                android:textSize="8.0sp" />
+
+            <ImageView
+                android:id="@+id/home_hasimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/home_timestamp" />
+
+            <TextView
+                android:id="@+id/home_origtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_nick"
+                android:text="这是一条很牛的微博，为什么呢，因为是小巫发的，哇咔咔！！！"
+                android:textColor="#081008"
+                android:textSize="14.0sp" />
+
+            <ImageView
+                android:id="@+id/iv_status_image"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/home_origtext"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/empty"
+                android:focusable="false"
+                android:src="@drawable/wb_album_pic_default"
+                android:visibility="gone" />
+				
+            <TextView
+                android:id="@+id/home_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/home_origtext"
+                android:layout_below="@id/iv_status_image"
+                android:text="@string/tencent"
+                android:textColor="#101810"
+                android:textSize="10.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_more_weibo_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            android:textColor="#000"
+            android:textSize="16sp" >
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/pb_more"
+            style="?android:attr/progressBarStyleSmallTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tv_more"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</FrameLayout>

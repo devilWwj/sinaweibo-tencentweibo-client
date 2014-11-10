@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/view_account"
+        android:title="查看帐号"/>
+    <item
+        android:id="@+id/delete_account"
+        android:title="删除帐号"/>
+
+</menu>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mention"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 标题栏 -->
+
+    <LinearLayout
+        android:id="@+id/mention_layout_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0.0dip"
+        android:background="@drawable/title_bg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="0.0dip"
+            android:background="@drawable/topbar_bg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_replyme"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_margin="0.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/topbar_bt"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="0.0dip"
+                android:paddingBottom="2.0dip"
+                android:text="@string/reply_me"
+                android:textColor="#ffffffff"
+                android:textSize="13.0sp" />
+
+            <Button
+                android:id="@+id/btn_atme"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_margin="0.0dip"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="0.0dip"
+                android:paddingBottom="2.0dip"
+                android:text="@string/at_me"
+                android:textColor="#ff90afff"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mention_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/mention_layout_bar" >
+
+        <!-- 回复我的 -->
+
+        <FrameLayout
+            android:id="@+id/fl_replyme"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.wwj.weiboClient.view.PullToRefreshListView
+                android:id="@+id/lv_replyme"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="3.0dip"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/pb_replyme"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/progressbar"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- @我的 -->
+
+        <FrameLayout
+            android:id="@+id/fl_atme"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <com.wwj.weiboClient.view.PullToRefreshListView
+                android:id="@+id/lv_atme"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:divider="@drawable/list_divider"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="3.0dip" />
+
+            <ProgressBar
+                android:id="@+id/pb_atme"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/progressbar"
+                android:visibility="gone" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mention_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/reply_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/at_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/com/wwj/weiboClient/adapters/FollowsListAdapter.java=UTF-8
+encoding//src/com/wwj/weiboClient/adapters/FriendsListAdapter.java=UTF-8
+encoding//src/com/wwj/weiboClient/adapters/SinaCommentListAdapter.java=UTF-8
+encoding//src/com/wwj/weiboClient/adapters/TencentCommentListAdapter.java=UTF-8
+encoding//src/com/wwj/weiboClient/library/SinaFaceMan.java=UTF-8
+encoding//src/com/wwj/weiboClient/library/TencentFaceMan.java=UTF-8
+encoding//src/com/wwj/weiboClient/model/Comment.java=UTF-8
+encoding//src/com/wwj/weiboClient/model/Favorite.java=UTF-8
+encoding//src/com/wwj/weiboClient/model/Status.java=UTF-8
+encoding//src/com/wwj/weiboClient/util/DialogHelp.java=UTF-8
+encoding//src/com/wwj/weiboClient/view/PullToRefreshListView2.java=UTF-8
+encoding/<project>=GBK

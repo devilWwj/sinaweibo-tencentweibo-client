@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_post_weibo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <include layout="@layout/post_weibo_title" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <EditText
+                android:id="@+id/et_weibo_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:gravity="left|top"
+                android:hint="@string/talk_something"
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_insert_pic_min_viewer"
+                android:layout_width="@dimen/pic_min_viewer_width"
+                android:layout_height="@dimen/pic_min_viewer_width"
+                android:layout_gravity="left|bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/empty"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/remain_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="10dp"
+                android:text="@string/text_count"
+                android:textSize="12.0sp" />
+        </FrameLayout>
+
+        <include layout="@layout/post_weibo_bottom" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_input_board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="#CCC"
+        android:visibility="gone" >
+
+        <include layout="@layout/face_list" />
+    </FrameLayout>
+
+</LinearLayout>

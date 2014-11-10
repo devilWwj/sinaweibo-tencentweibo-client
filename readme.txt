@@ -1,0 +1,3 @@
+- XiaoWuWeiboClient 客户端主程序
+- slidingmenu_library -侧滑控件关联项目
+- WeiboSDK 新浪微博SDK

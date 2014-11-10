@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tencent_list_selector"
+    android:descendantFocusability="blocksDescendants" >
+
+    <LinearLayout
+        android:id="@+id/ll_weibo_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="horizontal" >
+
+                <!-- 头像 -->
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/iv_profile_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="@string/empty"
+                        android:focusable="false"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/avatar_default" />
+
+                    <!-- 认证 -->
+
+                    <ImageView
+                        android:id="@+id/iv_verified"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="right|bottom"
+                        android:contentDescription="@string/empty"
+                        android:focusable="false"
+                        android:src="@drawable/v"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp" >
+
+                    <!-- 微博名 -->
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IT_xiao小巫"
+                        android:textColor="@color/blue"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/tencent_icon"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignTop="@+id/tv_name"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/tv_name"
+                        android:src="@drawable/sina" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/tv_name"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/iv_picture"
+                            android:layout_width="16dp"
+                            android:layout_height="12dp"
+                            android:layout_marginTop="3dp"
+                            android:contentDescription="@string/empty"
+                            android:focusable="false"
+                            android:src="@drawable/hasimage"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_created_at"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:singleLine="true"
+                            android:text="1小时前"
+                            android:textColor="#F18D00"
+                            android:textSize="10.0sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_name"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:autoLink="web"
+                            android:linksClickable="false"
+                            android:text="这是用生命在奋斗啊"
+                            android:textColor="#081008"
+                            android:textSize="14.0sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_inside_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/timeline_retweet_background_highlighted"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:id="@+id/tv_retweetdetail_text"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:autoLink="web"
+                                android:linksClickable="false"
+                                android:textColor="#081008"
+                                android:textSize="14.0sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_retweetdetail_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:contentDescription="@string/empty"
+                                android:focusable="false"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/pic_loading"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_status_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:contentDescription="@string/empty"
+                            android:focusable="false"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pic_loading"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_source"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:linksClickable="false"
+                            android:text="新浪微博"
+                            android:textColor="#101810"
+                            android:textSize="10.0sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_retweet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="转发:283" />
+
+            <Button
+                android:id="@+id/btn_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="评论：65" />
+
+            <Button
+                android:id="@+id/btn_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="点赞:350" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_more_weibo_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            android:textColor="#000"
+            android:textSize="16sp" >
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/pb_more"
+            style="?android:attr/progressBarStyleSmallTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tv_more"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</FrameLayout>

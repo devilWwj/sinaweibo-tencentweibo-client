@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@drawable/titlebar_bg_nor" >
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/title_button_height"
+        android:layout_height="@dimen/title_button_width"
+        android:layout_gravity="left|center_vertical"
+        android:background="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/friends"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+
+</FrameLayout>
